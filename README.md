@@ -113,8 +113,8 @@ This project is licensed under the MIT License – feel free to use, modify, and
 
 ## 🔗 Links
 
-* **Live Demo:** *(Add your GitHub Pages URL here)*
-* **Portfolio:** *(Optional: link to your personal portfolio)*
+* **Live Demo:** *[Github Deployed URL](https://akshat394.github.io/Task-Master-All-in-One-TO-DO-App/)*
+* **Portfolio:** *[Portfolio](https://ai-avatar-portfolio-six.vercel.app/)*
 
 ---
 
