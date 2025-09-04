@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Advanced To-Do App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>My Advanced To-Do List</h1>
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a new task" />
+      <select id="categoryInput">
+        <option value="General">General</option>
+        <option value="Work">Work</option>
+        <option value="Personal">Personal</option>
+      </select>
+      <input type="date" id="dueDateInput"/>
+      <button onclick="addTask()">Add</button>
+    </div>
+
+    <div class="filters">
+      <button onclick="filterTasks('all')" class="active">All</button>
+      <button onclick="filterTasks('todo')">To-Do</button>
+      <button onclick="filterTasks('done')">Done</button>
+      <select id="priorityFilter" onchange="renderTasks()">
+        <option value="all">All Priorities</option>
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+      </select>
+    </div>
+
+    <div id="taskList"></div>
+
+    <div class="dashboard">
+      <div class="dashboard-cards">
+        <div class="card completed">✅ Completed: <span id="completedCount">0</span></div>
+        <div class="card pending">🕒 Pending: <span id="pendingCount">0</span></div>
+        <div class="card high-priority">🔥 High Priority: <span id="highPriorityCount">0</span></div>
+      </div>
+      <div class="progress-bar-container">
+        <div class="progress-label">Progress:</div>
+        <div class="progress-bar"><div id="progressFill"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

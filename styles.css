@@ -1,0 +1,231 @@
+:root {
+  --primary: #5a67d8;
+  --secondary: #ff6b6b;
+  --success: #38a169;
+  --warning: #ed8936;
+  --danger: #e53e3e;
+  --light: #f7fafc;
+  --dark: #2d3748;
+  --card-bg: #ffffff;
+  --shadow: rgba(0,0,0,0.1);
+  --overdue: #f56565;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9e2ec);
+  margin: 0;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.container {
+  background: var(--light);
+  width: 100%;
+  max-width: 750px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px var(--shadow);
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-group input, .input-group select {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  box-shadow: inset 0 4px 6px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.input-group input:focus, .input-group select:focus {
+  box-shadow: 0 0 10px var(--primary);
+  transform: scale(1.02);
+}
+
+.input-group button {
+  padding: 12px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.input-group button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters button {
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  background: linear-gradient(135deg, #e2e8f0, #cbd5e0);
+  transition: 0.3s ease;
+}
+
+.filters button.active, .filters button:hover {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-bg);
+  padding: 15px;
+  border-radius: 15px;
+  margin-bottom: 12px;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+}
+
+.task.completed span {
+  text-decoration: line-through;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.task span {
+  display: inline-block;
+  max-width: 65%;
+  word-break: break-word;
+  font-weight: 500;
+}
+
+.task.overdue {
+  border-left: 5px solid var(--overdue);
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}
+
+.task .badge {
+  padding: 2px 6px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-left: 6px;
+  color: white;
+  font-weight: 600;
+}
+
+.badge.High { background: var(--danger); }
+.badge.Medium { background: var(--warning); }
+.badge.Low { background: var(--success); }
+
+.badge.Work { background: #5a67d8; }
+.badge.Personal { background: #ff6b6b; }
+.badge.General { background: #718096; }
+
+.task-actions button {
+  margin-left: 6px;
+  padding: 7px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  font-weight: 600;
+  transition: transform 0.2s ease;
+}
+
+.task-actions .done { background: var(--success); }
+.task-actions .undo { background: var(--warning); }
+.task-actions .delete { background: var(--danger); }
+
+.task-actions button:hover {
+  transform: scale(1.1);
+}
+
+/* Dashboard Cards */
+.dashboard {
+  margin-top: 30px;
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 15px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 120px;
+  background: linear-gradient(135deg, #edf2f7, #e2e8f0);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--dark);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.completed-card { background: linear-gradient(135deg,#38a169,#68d391); color:white;}
+.pending-card { background: linear-gradient(135deg,#ed8936,#f6ad55); color:white;}
+.high-priority-card { background: linear-gradient(135deg,#e53e3e,#f56565); color:white;}
+
+/* Progress Bar */
+.progress-bar-container {
+  margin-top: 15px;
+}
+
+.progress-label {
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 15px;
+  background: #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#progressFill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  transition: width 0.5s ease;
+}
