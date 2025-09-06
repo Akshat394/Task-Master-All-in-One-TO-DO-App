@@ -39,11 +39,7 @@ This app is perfect for **students, professionals, or anyone who wants a fun way
 
 ## 🖼 Screenshots
 
-<<<<<<< HEAD
 ![Task Master Screenshot](Task Master Screenshot.jpg)  
-=======
-![Task Master Screenshot]([https://via.placeholder.com/600x350?text=Task+Master+UI](https://github.com/Akshat394/Task-Master-All-in-One-TO-DO-App/blob/main/Task%20Master%20Screenshot.jpg))  
->>>>>>> f5d15e147bf650c7bfc5a8a90e914af679538175
 *Bright, clean, and interactive interface with colorful badges and dashboard cards.*
 
 ---
